@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Description
 This project was created as simple frontend app for test automation training. 
 
+## Live Demo
+https://patrjam.github.io/react-web-example/
+
 ## Installation
 ```
 git clone https://github.com/patrjam/react-web-example.git
