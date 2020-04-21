@@ -12,6 +12,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "codeceptjs": "^2.6.1",
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0",
+    "jsqa": "^2.2.0",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -26,7 +30,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test:lvl-1": "codeceptjs run --config=./automation-example/configs/level-1.config.conf.js --debug",
+    "test:lvl-2": "codeceptjs run --config=./automation-example/configs/level-2.config.conf.js --debug",
+    "test:lvl-3": "codeceptjs run --config=./automation-example/configs/level-3.config.conf.js --debug"
   },
   "eslintConfig": {
     "extends": "react-app"

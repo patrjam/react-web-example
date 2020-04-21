@@ -24,3 +24,10 @@ yarn-error.log*
 
 #build
 /build
+
+#output for automation tests
+/output
+
+.npmrc
+
+.env
