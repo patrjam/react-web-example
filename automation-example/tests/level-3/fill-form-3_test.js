@@ -1,5 +1,4 @@
-const form = require("../../pages/Form/Form");
-const message = require("../../pages/Messages/Success");
+const form = require("../../pages/Form/FormPage");
 const autoloadForm = new (require("../../pages/formAutoload"))();
 const faker = require("faker");
 
@@ -12,7 +11,7 @@ Scenario("Fill mandatory fields in form - @withDataClient", async (I) => {
   form.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();
-  I.see(message.success);
+  I.see(form.alerts.success);
 });
 
 Scenario("Fill mandatory fields in form - @customLocator(data-qa)", (I) => {
@@ -22,9 +21,9 @@ Scenario("Fill mandatory fields in form - @customLocator(data-qa)", (I) => {
   form.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
 
-  //NOTE: need to add data-qa in to code
+  //NOTE: need to uncomment data-qa in App.js
   I.click("$submit_with_locator");
-  I.see(message.success);
+  I.see(form.alerts.success);
 });
 
 Scenario("Fill mandatory fields in form - @autoload", (I) => {
@@ -34,5 +33,5 @@ Scenario("Fill mandatory fields in form - @autoload", (I) => {
   autoloadForm.Form.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();
-  I.see(message.success);
+  I.see(form.alerts.success);
 });

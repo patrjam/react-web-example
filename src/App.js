@@ -126,7 +126,11 @@ class App extends React.Component {
             </div>
 
             <div className="form-group">
-              <button className="btn btn-primary" type="submit">
+              <button
+                className="btn btn-primary"
+                //data-qa="submit_with_locator"
+                type="submit"
+              >
                 Submit
               </button>
             </div>

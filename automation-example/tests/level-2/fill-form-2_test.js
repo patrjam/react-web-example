@@ -1,5 +1,4 @@
-const form = require("../../pages/Form/Form");
-const message = require("../../pages/Messages/Success");
+const form = require("../../pages/Form/FormPage");
 const faker = require("faker");
 
 Feature("Level2: Fill form");
@@ -10,7 +9,7 @@ Scenario("Fill mandatory fields in form - @withPO", (I) => {
   I.fillField(form.inputs.email, faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   I.click(form.buttons.submit);
-  I.see(message.success);
+  I.see(form.alerts.success);
 });
 
 Scenario("Fill mandatory fields in form - @withPO&HelpFunctions", (I) => {
@@ -19,7 +18,7 @@ Scenario("Fill mandatory fields in form - @withPO&HelpFunctions", (I) => {
   form.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();
-  I.see(message.success);
+  I.see(form.alerts.success);
 });
 
 Scenario(
@@ -31,6 +30,6 @@ Scenario(
       faker.internet.email(),
       faker.lorem.text()
     );
-    I.see(message.success);
+    I.see(form.alerts.success);
   }
 );

@@ -31,9 +31,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test:lvl-1": "codeceptjs run --config=./automation-example/configs/level-1.config.conf.js --debug",
-    "test:lvl-2": "codeceptjs run --config=./automation-example/configs/level-2.config.conf.js --debug",
-    "test:lvl-3": "codeceptjs run --config=./automation-example/configs/level-3.config.conf.js --debug"
+    "test:level-1": "codeceptjs run --config=./automation-example/configs/level-1.config.conf.js --debug",
+    "test:level-2": "codeceptjs run --config=./automation-example/configs/level-2.config.conf.js --debug",
+    "test:level-3": "codeceptjs run --config=./automation-example/configs/level-3.config.conf.js --debug"
   },
   "eslintConfig": {
     "extends": "react-app"

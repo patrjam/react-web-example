@@ -31,6 +31,11 @@ module.exports = {
     training: locate(this.checkBoxInline).withText("Training"),
   },
 
+  alerts: {
+    success:
+    "We have received your message and will get in touch shortly. Thanks!",
+  },
+
   submitForm() {
     I.click(this.buttons.submit);
   },

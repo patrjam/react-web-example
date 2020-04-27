@@ -1,5 +1,5 @@
 function formAutoload() {
-  this.Form = require("./Form/Form.js");
+  this.Form = require("./Form/FormPage.js");
 }
 
 module.exports = formAutoload;
