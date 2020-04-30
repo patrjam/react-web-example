@@ -5,13 +5,13 @@ const faker = require("faker");
 Feature("Level3: Fill form");
 
 Scenario("Fill mandatory fields in form - @withDataClient", async (I) => {
-  const scudUser = await I.getScudUser();
+  const fooUser = await I.getFooUser();
 
   I.amOnPage("/");
 
-  I.fillField(form.inputs.name, scudUser.data.username);
+  I.fillField(form.inputs.name, fooUser.data.username);
   // this is not the right way
-  // await form.fillInNameWithScudUser();
+  // await form.fillInNameWithFooUser();
   form.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();

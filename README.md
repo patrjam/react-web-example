@@ -58,7 +58,7 @@ For deploy on page `https://patrjam.github.io/react-web-example/`
 
 ## CodeceptJS automation tests
 All tests demonstrate fill in mandatory fields in app.
-The whole issue is possible to find in `root/codeceptjs-automation-example` folder,
+The whole test automation part is possible to find in `root/codeceptjs-automation-example` folder,
 which contains sub folders:
 - configs
 - pages
@@ -71,12 +71,14 @@ which contains sub folders:
 
 Note: 1. & 2.level is possible run always.
 
-For 3.level is needed to set:
-- variables in .env file (ENV_NAME, SITE)
-- add .npmrc file with artifactory link
+For 3.level is needed to:
+- rename `.env.dist` file to `.env` and set variables in `.env` file (ENV_NAME, SITE)
+- add `.npmrc` file with artifactory link
+- replace `"foo/Foo"` placeholder
+
 
 ### Run tests with codeceptjs
-Before run tests, always run selenium-server on your machine.
+Before run tests, always run selenium-server on your machine, with command e.g. `selenium-server -port 4444`
 
 level 1 tests:
 `npm run test:level1`

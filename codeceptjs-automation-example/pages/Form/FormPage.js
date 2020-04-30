@@ -54,9 +54,9 @@ module.exports = {
   /*
   bad example for using data-client, logic and return test data are always coordinated in test scenario! 
 */
-  // async fillInNameWithScudUser() {
-  //   const scudUser = await I.getScudUser();
+  // async fillInNameWithFooUser() {
+  //   const fooUser = await I.getFooUser();
 
-  //   I.fillField(this.inputs.name, scudUser.data.username);
+  //   I.fillField(this.inputs.name, fooUser.data.username);
   // },
 };
