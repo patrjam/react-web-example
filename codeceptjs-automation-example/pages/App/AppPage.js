@@ -1,6 +1,5 @@
 class AppPage {
-  application = '[id="root"]'
-};
+  application = '[id="root"]';
+}
 
-module.exports = new AppPage()
-module.exports.AppPage = AppPage
+module.exports = AppPage;

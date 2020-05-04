@@ -1,5 +1,5 @@
-const form = require("../../pages/Form/FormPage");
-const autoloadForm = new (require("../../pages/formAutoload"))();
+const form = new (require("../../pages/Form/FormPage"))();
+const formAutoload = new (require("../../pages/formAutoload"))();
 const faker = require("faker");
 
 Feature("Level3: Fill form");
@@ -34,7 +34,7 @@ Scenario("Fill mandatory fields in form - @autoload", (I) => {
   I.amOnPage("/");
 
   I.fillField(form.inputs.name, faker.name.firstName());
-  autoloadForm.Form.fillInRandomEmail(faker.internet.email());
+  formAutoload.FormPage.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();
   I.see(form.alerts.success);
