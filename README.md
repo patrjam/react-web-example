@@ -73,7 +73,7 @@ Note: 1. & 2.level is possible run always.
 
 For 3.level is needed to:
 - rename `.env.dist` file to `.env` and set variables in `.env` file (ENV_NAME, SITE)
-- add `.npmrc` file with artifactory link
+- rename `.npmrc.dist` file to `.npmrc` and set artifactory link
 - replace `"foo/Foo"` placeholder
 
 
