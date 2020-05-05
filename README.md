@@ -55,3 +55,53 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### `npm run deploy`
 
 For deploy on page `https://patrjam.github.io/react-web-example/`
+
+## CodeceptJS automation tests
+All tests demonstrate fill in mandatory fields in app.
+The whole test automation part is possible to find in `root/codeceptjs-automation-example` folder,
+which contains sub folders:
+- configs
+- pages
+- tests
+
+### Example levels
+- 1.level - codeceptjs basics
+- 2.level - page objects and methods
+- 3.level - use private jsqa package, custom locators, autoloading
+
+Note: 1. & 2.level is possible run always.
+
+For 3.level is needed to:
+- rename `.env.dist` file to `.env` and set variables in `.env` file (ENV_NAME, SITE)
+- rename `.npmrc.dist` file to `.npmrc` and set artifactory link
+- replace `"foo/Foo"` placeholder
+
+
+### Run tests with codeceptjs
+#### NodeJS
+- Before first run, check your actual node version is >= 12.0.0
+    ```
+    node -v
+    ```
+
+Before run tests, always run selenium-server on your machine, with command e.g.
+```
+selenium-server -port 4444
+```
+
+### Run tests from package scripts
+
+- level 1 tests:
+```
+npm run test:level1
+```
+
+- level 2 tests:
+```
+npm run test:level2
+```
+
+- level 3 tests:
+```
+npm run test:level3
+```
