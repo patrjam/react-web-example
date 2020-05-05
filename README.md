@@ -78,13 +78,30 @@ For 3.level is needed to:
 
 
 ### Run tests with codeceptjs
-Before run tests, always run selenium-server on your machine, with command e.g. `selenium-server -port 4444`
+#### NodeJS
+- Before first run, check your actual node version is >= 12.0.0
+    ```
+    node -v
+    ```
 
-level 1 tests:
-`npm run test:level1`
+Before run tests, always run selenium-server on your machine, with command e.g.
+```
+selenium-server -port 4444
+```
 
-level 2 tests:
-`npm run test:level2`
+### Run tests from package scripts
 
-level 3 tests:
-`npm run test:level3`
+- level 1 tests:
+```
+npm run test:level1
+```
+
+- level 2 tests:
+```
+npm run test:level2
+```
+
+- level 3 tests:
+```
+npm run test:level3
+```
