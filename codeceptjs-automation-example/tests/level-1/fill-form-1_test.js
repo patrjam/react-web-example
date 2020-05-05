@@ -6,5 +6,5 @@ Scenario("Fill mandatory fields in form - @basic", (I) => {
   I.fillField("#email", "email@example.com");
   I.fillField("#comment", "my comment");
   I.click(".btn");
-  I.see("We have received your message and will get in touch shortly. Thanks!")
+  I.see("We have received your message and will get in touch shortly. Thanks!");
 });
