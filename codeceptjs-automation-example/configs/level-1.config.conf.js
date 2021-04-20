@@ -14,9 +14,7 @@ exports.config = {
       browser: 'chrome'
     }
   },
-  include: {
-    I: '../../steps_file.js'
-  },
+  include: {},
   bootstrap: null,
   mocha: {},
   name: 'react-web-example',

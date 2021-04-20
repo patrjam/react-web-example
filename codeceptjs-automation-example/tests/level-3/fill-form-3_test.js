@@ -4,12 +4,12 @@ const faker = require("faker");
 
 Feature("Level3: Fill form");
 
-Scenario("Fill mandatory fields in form - @withDataClient", async (I) => {
+Scenario("Fill mandatory fields in form - @withDataClient", async ({ I }) => {
   const fooUser = await I.getFooUser();
 
   I.amOnPage("/");
 
-  I.fillField(form.inputs.name, fooUser.data.username);
+  I.fillField(form.inputs.name, fooUser.username);
   // this is not the right way
   // await form.fillInNameWithFooUser();
   form.fillInRandomEmail(faker.internet.email());
@@ -18,7 +18,7 @@ Scenario("Fill mandatory fields in form - @withDataClient", async (I) => {
   I.see(form.alerts.success);
 });
 
-Scenario("Fill mandatory fields in form - @customLocator(data-qa)", (I) => {
+Scenario("Fill mandatory fields in form - @customLocator(data-qa)", ({ I }) => {
   I.amOnPage("/");
 
   I.fillField(form.inputs.name, faker.name.firstName());
@@ -30,7 +30,7 @@ Scenario("Fill mandatory fields in form - @customLocator(data-qa)", (I) => {
   I.see(form.alerts.success);
 });
 
-Scenario("Fill mandatory fields in form - @autoload", (I) => {
+Scenario("Fill mandatory fields in form - @autoload", ({ I }) => {
   I.amOnPage("/");
 
   I.fillField(form.inputs.name, faker.name.firstName());

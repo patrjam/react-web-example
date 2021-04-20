@@ -12,14 +12,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "codeceptjs": "^2.6.1",
+    "@wdio/cli": "^6.10.5",
+    "codeceptjs": "^3.0.2",
     "dotenv": "^8.2.0",
     "faker": "^4.1.0",
-    "jsqa": "^2.2.0",
+    "jsqa": "^5.2.1",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "webdriverio": "^6.10.5"
   },
   "devDependencies": {
     "gh-pages": "2.2.0"

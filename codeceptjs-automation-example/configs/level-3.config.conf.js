@@ -14,24 +14,16 @@ exports.config = {
       browser: 'chrome'
     },
     DataClientHelper: {
-        require: 'jsqa/helpers/dataClientHelper.js'
+        require: 'jsqa/lib/helpers/DataClientHelper'
       },
-      WebDriverHelper: {
-        require: 'jsqa/helpers/webDriverHelper.js'
-      },
-      RESTClientHelper: {
-        require: 'jsqa/helpers/RESTClientHelper.js',
-        defaultHeaders: {
-          'Content-Type': 'application/json'
-        }
-      },
-      AssertWrapper: {
-        require: 'codeceptjs-assert'
-      }
+    RESTClientHelper: {
+       require: 'jsqa/lib/helpers/RESTClientHelper',
+       defaultHeaders: {
+         'Content-Type': 'application/json',
+       },
+     },  
   },
-  include: {
-    I: 'jsqa/steps_file.js'
-  },
+  include: {},
   bootstrap: null,
   mocha: {},
   name: 'react-web-example',

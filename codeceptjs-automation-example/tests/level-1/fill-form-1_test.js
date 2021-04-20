@@ -1,6 +1,6 @@
 Feature("Level1: Fill form");
 
-Scenario("Fill mandatory fields in form - @basic", (I) => {
+Scenario("Fill mandatory fields in form - @basic", ({ I }) => {
   I.amOnPage("/");
   I.fillField("#name", "Eva");
   I.fillField("#email", "email@example.com");
