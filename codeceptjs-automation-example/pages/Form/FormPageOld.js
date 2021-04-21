@@ -1,7 +1,7 @@
 const { I } = inject();
 const app = new (require("../App/AppPage"))();
 
-class FormPage {
+class FormPageOld {
   container = locate(app.application).find("div.container");
 
   inputs = {
@@ -61,5 +61,4 @@ class FormPage {
   // },
 }
 
-module.exports = new FormPage();
-module.exports.FormPage = FormPage;
+module.exports = FormPageOld;

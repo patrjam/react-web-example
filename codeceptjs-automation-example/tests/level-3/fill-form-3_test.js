@@ -1,5 +1,4 @@
-const form = new (require("../../pages/Form/FormPage"))();
-const formAutoload = new (require("../../pages/formAutoload"))();
+const form = new (require("../../pages/Form/FormPageOld"))();
 const faker = require("faker");
 
 Feature("Level3: Fill form");
@@ -30,11 +29,11 @@ Scenario("Fill mandatory fields in form - @customLocator(data-qa)", ({ I }) => {
   I.see(form.alerts.success);
 });
 
-Scenario("Fill mandatory fields in form - @autoload", ({ I }) => {
+Scenario("Fill mandatory fields in form - @autoload", ({ I, FormPage }) => {
   I.amOnPage("/");
 
   I.fillField(form.inputs.name, faker.name.firstName());
-  formAutoload.FormPage.fillInRandomEmail(faker.internet.email());
+  FormPage.fillInRandomEmail(faker.internet.email());
   I.fillField(form.inputs.comment, faker.lorem.text());
   form.submitForm();
   I.see(form.alerts.success);

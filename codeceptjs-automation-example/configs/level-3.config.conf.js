@@ -23,7 +23,9 @@ exports.config = {
        },
      },  
   },
-  include: {},
+  include: {
+    ...require('../pages/formAutoload.js'),
+  },
   bootstrap: null,
   mocha: {},
   name: 'react-web-example',

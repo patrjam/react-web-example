@@ -1,4 +1,4 @@
-const form = new (require("../../pages/Form/FormPage"))();
+const form = new (require("../../pages/Form/FormPageOld"))();
 const faker = require("faker");
 
 Feature("Level2: Fill form");
